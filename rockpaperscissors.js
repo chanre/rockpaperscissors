@@ -32,17 +32,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    let player = 0;
+    let computer = 0;
     for (let i = 0; i < 5; i++) {
-        let round = playRound(prompt("Rock, paper or scissors?", "Rock"));
-        let player = 0;
-        let computer = 0;
+        let round = playRound(prompt("Rock, paper or scissors?", "Rock"), getComputerChoice());
         if (round === "player") {
             player++;
         } else if (round === "computer") {
             computer++;
         }
     }   
-     
+
     if (player > computer) {
         console.log("You won!");
     } else if (player === computer) {
