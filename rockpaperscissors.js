@@ -15,19 +15,41 @@ let getComputerChoice = () => {
 
 function playRound(playerSelection, computerSelection) {
     let player = playerSelection.toLowerCase();
-    let win;
+    let winner = "";
     if (player === "rock" && computerSelection === "scissors" 
     || player === "scissors" && computerSelection === "paper" 
     || player === "paper" && computerSelection === "rock") {
-        win = `You win! ${player} beats ${computerSelection}`; 
+        console.log(`You win! ${player} beats ${computerSelection}`); 
+        winner = "player";
     } else if (player === computerSelection) {
-        win = "Tie! You both chose the same option";
+        console.log("Tie! You both chose the same option");
+        winner = "tie";
     } else {
-        win = `You lose! ${computerSelection} beats ${player}`;
+        console.log(`You lose! ${computerSelection} beats ${player}`);
+        winner = "computer";
     }
-    return win;
+    return winner;
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let round = playRound(prompt("Rock, paper or scissors?", "Rock"));
+        let player = 0;
+        let computer = 0;
+        if (round === "player") {
+            player++;
+        } else if (round === "computer") {
+            computer++;
+        }
+    }   
+     
+    if (player > computer) {
+        console.log("You won!");
+    } else if (player === computer) {
+        console.log("You tied!");
+    } else {
+        console.log("Computer won!");
+    }  
+}
+
+game()
