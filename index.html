@@ -13,17 +13,18 @@
         <h1 class="title">ROCK PAPER SCISSORS</h1>
     </header>
     <div class="score-message">
-        <h2 class="message">Face off against the computer! First to 5 wins!</h2>
-        <h3 class="instructions">What do you choose?</h3>
+        <h1 class="message">Face off against the computer! First to 5 wins!</h2>
+        <h2 class="instructions">What do you choose?</h3>
+        <h3 class="winMessage">Good luck!</h3>
     </div>
     <div class="scoreboard">
         <div class="score" id="player"> 
             Player 
-            <div id="playerScore"> 0 </div>
+            <div id="playerScore">0</div>
         </div>
         <div class="score" id="com"> 
             COM
-            <div id="comScore"> 0 </div> 
+            <div id="comScore">0</div> 
         </div>
     </div>
     <div class="btn-container">
@@ -32,6 +33,11 @@
         <button class="buttons" id="scissors">Scissors</button>
     </div>
     
+    <div class="modal">
+        <div class="modal-content">
+            <button class="restart">Play again?</button>
+        </div>
+    </div>
 </body>
 </html>
 <script src="rockpaperscissors.js"></script>
