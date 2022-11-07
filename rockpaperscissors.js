@@ -51,5 +51,3 @@ function game() {
         console.log("Computer won!");
     }  
 }
-
-game()
